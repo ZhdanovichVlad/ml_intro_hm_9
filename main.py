@@ -26,7 +26,7 @@ from sklearn.metrics import accuracy_score
 
 
 if __name__ == '__main__':
-    set_the_path = click.prompt('train in current path + data? Y or N', str)
+    set_the_path = click.prompt('Train in current path + data? Y or N', str)
     if set_the_path == 'Y':
         path = os.getcwd() + '\\data\\train.csv'
     elif set_the_path == "N":
