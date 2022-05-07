@@ -39,14 +39,13 @@ def nested_cv_rf (X_train ,y_train, n_cv_outer=10, n_cv_inner=3, random_state=42
         # get the best performing model fit on the whole training set
         best_model = result.best_estimator_
         models.append(best_model)
-        # evaluate model on the hold out dataset
+     
         yhat = best_model.predict(X_test_2)
         yhat_prob = best_model.predict_proba(X_test_2)
-        # evaluate the model
         acc = accuracy_score(y_test_2, yhat)
         f1 = f1_score(y_test_2, yhat, average='weighted')
         ras = roc_auc_score(y_test_2, yhat_prob, multi_class='ovo')
-        # store the result
+
         outer_results_acc.append(acc)
         outer_results_f1.append(f1)
         outer_results_roc_auc.append(ras)
