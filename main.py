@@ -37,7 +37,7 @@ if __name__ == '__main__':
         model_name = 'nested_cross_validation_with_random_forest'
 
     if n_model == 2:
-        n_cv_in = int(click.prompt('please set the number of cv for cross validation', int))
+        n_cv_in = int(click.prompt('Please set the number of cv for cross validation', int))
         model = LinerRegression.Liner_Model(X_train,y_train,random_state,n_cv_in)
         model_name = 'Liner Regression with cross validation'
 
