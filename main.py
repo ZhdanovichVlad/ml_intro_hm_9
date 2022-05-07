@@ -30,7 +30,7 @@ if __name__ == '__main__':
     if set_the_path == 'Y':
         path = os.getcwd() + '\\data\\train.csv'
     elif set_the_path == "N":
-        path = click.prompt('please set the path', str)
+        path = click.prompt('Please set the path', str)
     else:
         print('You entered the wrong answer')
         exit()
