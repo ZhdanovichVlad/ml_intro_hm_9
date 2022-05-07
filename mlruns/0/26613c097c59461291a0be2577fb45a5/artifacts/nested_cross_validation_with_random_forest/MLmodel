@@ -1,0 +1,16 @@
+artifact_path: nested_cross_validation_with_random_forest
+flavors:
+  python_function:
+    env: conda.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.pkl
+    python_version: 3.9.12
+  sklearn:
+    code: null
+    pickled_model: model.pkl
+    serialization_format: cloudpickle
+    sklearn_version: 1.0.2
+mlflow_version: 1.25.1
+model_uuid: ec109942530d43408554d0b5232271e6
+run_id: 26613c097c59461291a0be2577fb45a5
+utc_time_created: '2022-05-07 13:58:59.743095'

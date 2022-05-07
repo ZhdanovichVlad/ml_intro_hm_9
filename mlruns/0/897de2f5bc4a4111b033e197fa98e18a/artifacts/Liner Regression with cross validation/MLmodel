@@ -1,0 +1,16 @@
+artifact_path: Liner Regression with cross validation
+flavors:
+  python_function:
+    env: conda.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.pkl
+    python_version: 3.9.12
+  sklearn:
+    code: null
+    pickled_model: model.pkl
+    serialization_format: cloudpickle
+    sklearn_version: 1.0.2
+mlflow_version: 1.25.1
+model_uuid: 21b93d6bbefa42fb827154d9441471b0
+run_id: 897de2f5bc4a4111b033e197fa98e18a
+utc_time_created: '2022-05-07 14:14:47.891185'
