@@ -32,11 +32,11 @@ def nested_cv_rf (X_train ,y_train, n_cv_outer=10, n_cv_inner=3, random_state=42
         space['max_features'] = [2, 4, 6]
         # define search
         scoring = {"AUC": "roc_auc_ovo", "Accuracy": make_scorer(accuracy_score) ,'f1' :'f1_weighted'}
-        # search = GridSearchCV(model, space, scoring='accuracy', cv=cv_inner, refit=True)
+      
         search = GridSearchCV(model, space, scoring=scoring, cv=cv_inner, refit="AUC")
         # execute search
         result = search.fit(X_train_2, y_train_2)
-        
+
         best_model = result.best_estimator_
         models.append(best_model)
 
