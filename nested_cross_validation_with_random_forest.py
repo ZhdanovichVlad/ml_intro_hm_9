@@ -36,10 +36,10 @@ def nested_cv_rf (X_train ,y_train, n_cv_outer=10, n_cv_inner=3, random_state=42
         search = GridSearchCV(model, space, scoring=scoring, cv=cv_inner, refit="AUC")
         # execute search
         result = search.fit(X_train_2, y_train_2)
-        # get the best performing model fit on the whole training set
+        
         best_model = result.best_estimator_
         models.append(best_model)
-     
+
         yhat = best_model.predict(X_test_2)
         yhat_prob = best_model.predict_proba(X_test_2)
         acc = accuracy_score(y_test_2, yhat)
