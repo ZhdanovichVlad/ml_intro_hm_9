@@ -1,10 +1,5 @@
 # This is a sample Python script.
 import os
-from sklearn.linear_model import LogisticRegression
-from sklearn.model_selection import cross_validate
-from sklearn.model_selection import KFold
-from sklearn.model_selection import cross_val_score
-import pandas as pd
 import click
 # Press Shift+F10 to execute it or replace it with your code.
 # Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
