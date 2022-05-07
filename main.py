@@ -42,7 +42,7 @@ if __name__ == '__main__':
         model_name = 'Liner Regression with cross validation'
 
 
-    #mlflow.set_tracking_uri('http://localhost:5000')
+    
 
     with mlflow.start_run():
         #model_nsvwrf = model_nsvwrf['model']
