@@ -3,9 +3,6 @@ import click
 import LinerRegression
 import get_dataset
 import mlflow
-from sklearn.ensemble import RandomForestClassifier
-from sklearn.model_selection import GridSearchCV
-
 import nested_cross_validation_with_random_forest
 import pipline
 import numpy as np
