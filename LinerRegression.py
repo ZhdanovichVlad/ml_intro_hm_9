@@ -3,9 +3,7 @@ from sklearn.model_selection import cross_validate
 
 import pipline
 import numpy as np
-from sklearn.metrics import r2_score
-from sklearn.metrics import balanced_accuracy_score
-from sklearn.metrics import mean_squared_error
+
 
 def Liner_Model(X_train,y_train,random_state=42, n_cv = 5):
     model = pipline.create_pipeline(True,100,1.0,random_state)
