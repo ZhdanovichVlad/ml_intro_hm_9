@@ -11,7 +11,7 @@ from tqdm import tqdm
 
 def nested_cv_rf (X_train ,y_train, n_cv_outer=10, n_cv_inner=3, random_state=42):
     cv_outer = KFold(n_splits=n_cv_outer, shuffle=True, random_state=random_state)
-    # enumerate splits
+
     outer_results_acc = list()
     outer_results_f1 = list()
     outer_results_roc_auc = list()
@@ -22,15 +22,15 @@ def nested_cv_rf (X_train ,y_train, n_cv_outer=10, n_cv_inner=3, random_state=42
 
         X_train_2, X_test_2 = X.iloc[train_ix, :], X.iloc[test_ix, :]
         y_train_2, y_test_2 = y.iloc[train_ix], y.iloc[test_ix]
-      
+
         cv_inner = KFold(n_splits=n_cv_inner, shuffle=True, random_state=random_state)
-        # define the model
+
         model = RandomForestClassifier(random_state=random_state)
-        # define search space
+
         space = dict()
         space['n_estimators'] = [5, 50, 200]
         space['max_features'] = [2, 4, 6]
-        # define search
+
         scoring = {"AUC": "roc_auc_ovo", "Accuracy": make_scorer(accuracy_score) ,'f1' :'f1_weighted'}
 
         search = GridSearchCV(model, space, scoring=scoring, cv=cv_inner, refit="AUC")
