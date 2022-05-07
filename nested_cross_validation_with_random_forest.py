@@ -19,10 +19,10 @@ def nested_cv_rf (X_train ,y_train, n_cv_outer=10, n_cv_inner=3, random_state=42
     X = X_train
     y = y_train
     for train_ix, test_ix in tqdm(cv_outer.split(X)):
-      
+
         X_train_2, X_test_2 = X.iloc[train_ix, :], X.iloc[test_ix, :]
         y_train_2, y_test_2 = y.iloc[train_ix], y.iloc[test_ix]
-        # configure the cross-validation procedure
+      
         cv_inner = KFold(n_splits=n_cv_inner, shuffle=True, random_state=random_state)
         # define the model
         model = RandomForestClassifier(random_state=random_state)
