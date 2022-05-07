@@ -32,7 +32,7 @@ if __name__ == '__main__':
     elif set_the_path == "N":
         path = click.prompt('please set the path', str)
     else:
-        print('you entered the wrong answer')
+        print('You entered the wrong answer')
         exit()
 
     random_state = int(click.prompt('Please enter random state (int) ', int))
