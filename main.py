@@ -29,7 +29,7 @@ if __name__ == '__main__':
     print('Enter 2 if you want to select liner regression')
     n_model = int(click.prompt('Enter the number', int))
     if n_model == 1:
-        n_cv_outer = int(click.prompt('please set the number of cv for outer cross validation', int))
+        n_cv_outer = int(click.prompt('Please set the number of cv for outer cross validation', int))
         n_cv_in = int(click.prompt('please set the number of cv for inner cross validation', int))
         model_nsvwrf = nested_cross_validation_with_random_forest.nested_cv_rf(X_train,y_train,n_cv_outer,n_cv_in,
                                                                            random_state)
