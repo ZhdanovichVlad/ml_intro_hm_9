@@ -36,7 +36,7 @@ if __name__ == '__main__':
         exit()
 
     random_state = int(click.prompt('please enter random state (int) ', int))
-    test_split_ratio = float(click.prompt('please enter test_split_ratio (float)',float))
+    test_split_ratio = float(click.prompt('Please enter test_split_ratio (float)',float))
     X_train, X_test, y_train, y_test = get_dataset.get_dataset(path,random_state,test_split_ratio)
 
     print('Please select the model.')
