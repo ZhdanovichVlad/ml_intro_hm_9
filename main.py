@@ -4,10 +4,6 @@ import LinerRegression
 import get_dataset
 import mlflow
 import nested_cross_validation_with_random_forest
-import pipline
-import numpy as np
-from sklearn.metrics import balanced_accuracy_score
-from sklearn.metrics import mean_squared_error
 from sklearn.metrics import roc_auc_score
 from sklearn.metrics import f1_score
 from sklearn.metrics import accuracy_score
