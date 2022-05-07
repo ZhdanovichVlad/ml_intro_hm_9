@@ -39,7 +39,7 @@ if __name__ == '__main__':
     test_split_ratio = float(click.prompt('please enter test_split_ratio (float)',float))
     X_train, X_test, y_train, y_test = get_dataset.get_dataset(path,random_state,test_split_ratio)
 
-    print('please select the model.')
+    print('Please select the model.')
     print('Enter 1 if you want to select nested_cross_validation_with_random_forest')
     print('Enter 2 if you want to select liner regression')
     n_model = int(click.prompt('Enter the number', int))
