@@ -42,10 +42,9 @@ if __name__ == '__main__':
         model_name = 'Liner Regression with cross validation'
 
 
-    
+
 
     with mlflow.start_run():
-        #model_nsvwrf = model_nsvwrf['model']
         ansv_model_nsvwrf = model.predict(X_test)
         ansv_proba_model_nsvwrf = model.predict_proba(X_test)
         acc = accuracy_score(y_test, ansv_model_nsvwrf)
